@@ -8,8 +8,8 @@ const CollectionPreview = ({title, items}) => (
         <div className='preview'>
             {
                 // The filter is used to limit items retrieved to four
-                items.filter((item, idx) => idx < 4).map(({ id, ...otherItemProps }) => (
-                    <CollectionItem key={id} {...otherItemProps} />
+                items.filter((item, idx) => idx < 4).map((item) => (
+                    <CollectionItem key={item.id} item={item} />
                 ))
             }
         </div>
